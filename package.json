@@ -1,17 +1,17 @@
 {
   "name": "ember-firebase-service",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "This addon exposes a service that's a direct representation of Firebase",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Mikko Paderes",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/rmmmp/ember-firebase-service",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
