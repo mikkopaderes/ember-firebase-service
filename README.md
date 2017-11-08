@@ -10,7 +10,7 @@ Download the addon by running this command:
 ember install ember-firebase-service
 ```
 
-## Usage
+## Configuration
 
 Add your Firebase configuration in your app's `config/environment.js`.
 
@@ -31,7 +31,9 @@ let ENV = {
 }
 ```
 
-After setting up your configuration, you can now inject the `firebase` service and use it as you would use Firebase normally.
+## Usage
+
+You can now inject the `firebase` service and use it as you would use Firebase normally.
 
 ```javascript
 import { inject } from '@ember/service';
