@@ -33,7 +33,7 @@ let ENV = {
 
 ## Usage
 
-You can now inject the `firebase` service and use it as you would use Firebase normally.
+Inject the `firebase` service and use it as you would use Firebase normally.
 
 ```javascript
 import { inject } from '@ember/service';
