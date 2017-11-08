@@ -1,0 +1,11 @@
+# ember generated app files
+app.js
+resolver.js
+router.js
+
+# ember generated test files
+tests/helpers/destroy-app.js
+tests/helpers/module-for-acceptance.js
+tests/helpers/resolver.js
+tests/helpers/start-app.js
+tests/test-helper.js
