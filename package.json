@@ -1,7 +1,7 @@
 {
   "name": "ember-firebase-service",
-  "version": "4.0.0",
-  "description": "This addon exposes a service that's a direct representation of Firebase",
+  "version": "4.0.1",
+  "description": "Exposes a service that's a direct representation of Firebase",
   "keywords": [
     "ember-addon"
   ],
