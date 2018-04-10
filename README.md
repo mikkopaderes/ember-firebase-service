@@ -33,6 +33,29 @@ let ENV = {
 }
 ```
 
+Import the Firebase features that you need in your app's `ember-cli-build.js`.
+
+```javascript
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+module.exports = function (defaults) {
+  const app = new EmberApp(defaults, {
+    ...
+  });
+
+  ...
+
+  app.import('node_modules/firebase/firebase-auth.js');
+  app.import('node_modules/firebase/firebase-firestore.js');
+
+  return app.toTree();
+};
+```
+
+> You don't need to import `firebase-app.js` as it's automatically done for you
+
 Usage
 ------------------------------------------------------------------------------
 

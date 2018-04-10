@@ -2,14 +2,14 @@
   function vendorModule() {
     'use strict';
 
-    if (window.FastBoot) {
+    if (typeof FastBoot === 'undefined') {
       return {
-        'default': FastBoot.require('firebase'),
+        'default': self['firebase'],
         __esModule: true,
       };
     } else {
       return {
-        'default': self['firebase'],
+        'default': FastBoot.require('firebase'),
         __esModule: true,
       };
     }

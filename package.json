@@ -1,6 +1,6 @@
 {
   "name": "ember-firebase-service",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Exposes a service that's a direct representation of Firebase",
   "keywords": [
     "ember-addon"
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "firebase": "^4.11.0"
+    "firebase": "^4.12.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
