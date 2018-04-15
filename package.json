@@ -1,6 +1,6 @@
 {
   "name": "ember-firebase-service",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Exposes a service that's a direct representation of Firebase",
   "keywords": [
     "ember-addon"
@@ -55,7 +55,7 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "fastbootDependencies": [
-      "firebase"
+      "firebase/app"
     ]
   }
 }

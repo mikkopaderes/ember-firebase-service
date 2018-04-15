@@ -9,7 +9,7 @@
       };
     } else {
       return {
-        'default': FastBoot.require('firebase'),
+        'default': FastBoot.require('firebase/app'),
         __esModule: true,
       };
     }
