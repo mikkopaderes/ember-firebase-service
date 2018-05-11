@@ -3,14 +3,15 @@ ember-firebase-service
 
 Exposes a service that's a direct representation of Firebase.
 
-*Versioning will be aligned with Firebase's MAJOR version. For example, if you want to use Firebase v4.x.x, you would need to depend on the ^4.0.0 version of this addon.*
-
 Installation
 ------------------------------------------------------------------------------
 
 ```
+npm install firebase@5.x --save-dev
 ember install ember-firebase-service
 ```
+
+*Versioning will be aligned with Firebase's MAJOR version. For example, if you want to use Firebase v4.x, you would need to depend on the v4.x of this addon.*
 
 ### Configuration
 
