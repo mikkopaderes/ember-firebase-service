@@ -6,6 +6,4 @@ tests/*.js
 tests/dummy/*.js
 tests/dummy/app/*.js
 tests/dummy/config/*.js
-tests/helpers/destroy-app.js
-tests/helpers/module-for-acceptance.js
-tests/helpers/start-app.js
+/blueprints/*/files/**/*.js

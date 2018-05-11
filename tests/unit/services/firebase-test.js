@@ -1,23 +1,28 @@
-import { moduleFor, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleFor('service:firebase', 'Unit | Service | firebase');
+module('Unit | Service | firebase', function (hooks) {
+  setupTest(hooks);
 
-test('should expose Firebase as a service', function(assert) {
-  assert.expect(1);
+  module('initialization', function () {
+    test('should expose Firebase as a service', function (assert) {
+      assert.expect(1);
 
-  // Arrange
-  this.register('config:environment', {
-    apiKey: '<api_key>',
-    authDomain: '<auth_domain>',
-    databaseURL: '<database_url>',
-    projectId: '<project_id>',
-    storageBucket: '<storage_bucket>',
-    messagingSenderId: '<messaging_sender_id>',
+      // Arrange
+      this.owner.register('config:environment', {
+        apiKey: '<api_key>',
+        authDomain: '<auth_domain>',
+        databaseURL: '<database_url>',
+        projectId: '<project_id>',
+        storageBucket: '<storage_bucket>',
+        messagingSenderId: '<messaging_sender_id>',
+      });
+
+      // Act
+      const result = this.owner.lookup('service:firebase');
+
+      // Assert
+      assert.equal(result.name, '[DEFAULT]');
+    });
   });
-
-  // Act
-  const result = this.subject();
-
-  // Assert
-  assert.equal(result.name, '[DEFAULT]');
 });

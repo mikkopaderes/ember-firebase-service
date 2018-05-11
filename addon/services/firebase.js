@@ -5,7 +5,6 @@ import firebase from 'firebase';
 export default {
   /**
    * @type {boolean}
-   * @default
    * @readonly
    */
   isServiceFactory: true,
@@ -13,6 +12,7 @@ export default {
   /**
    * @param {Object} context
    * @return {Firebase} Initialized Firebase app
+   * @function
    */
   create(context) {
     const config = getOwner(context).resolveRegistration('config:environment');
