@@ -6,7 +6,7 @@
     "ember-addon",
     "firebase"
   ],
-  "repository": "https://github.com/rmmmp/ember-firebase-service",
+  "repository": "https://github.com/mikkopaderes/ember-firebase-service",
   "license": "MIT",
   "author": "Mikko Paderes",
   "directories": {
