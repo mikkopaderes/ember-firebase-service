@@ -49,12 +49,12 @@
     "eslint-plugin-ember": "^5.2.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^7.0.1",
-    "firebase": "^5.0.2",
+    "firebase": "^6.2.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0"
   },
   "peerDependencies": {
-    "firebase": "5.x"
+    "firebase": "6.x"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
