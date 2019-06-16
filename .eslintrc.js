@@ -9,10 +9,7 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    'plugin:ember/recommended',
-    'airbnb-base',
-    'rmmmp/base',
-    'rmmmp/ember'
+    'plugin:ember/recommended'
   ],
   env: {
     browser: true
@@ -23,6 +20,8 @@ module.exports = {
     // node files
     {
       files: [
+        '.eslintrc.js',
+        '.template-lintrc.js',
         'ember-cli-build.js',
         'index.js',
         'testem.js',

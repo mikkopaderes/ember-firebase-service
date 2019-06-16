@@ -3,6 +3,13 @@ ember-firebase-service
 
 Exposes a service that's a direct representation of Firebase.
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.x or above
+
+
 Installation
 ------------------------------------------------------------------------------
 
@@ -63,16 +70,16 @@ Usage
 Inject the `firebase` service and use it as you would use Firebase normally.
 
 ```javascript
-import { inject } from '@ember/service';
+import { inject as service } from '@ember/service';
 import Component from '@ember/component';
 
 export default Component.extend({
-  firebase: inject(),
+  firebase: service(),
 
   init(...args) {
     this._super(...args);
 
-    this.get('firebase').auth().signInWithEmailAndPassword('foo', 'bar');
+    this.firebase.auth().signInWithEmailAndPassword('foo', 'bar');
   }
 });
 ```
@@ -80,29 +87,8 @@ export default Component.extend({
 Contributing
 ------------------------------------------------------------------------------
 
-### Installation
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
-* `git clone <repository-url>`
-* `cd ember-firebase-service`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 License
 ------------------------------------------------------------------------------
