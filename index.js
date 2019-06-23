@@ -1,3 +1,5 @@
+/* eslint node/no-extraneous-require: off */
+
 'use strict';
 
 const { map } = require('broccoli-stew');
