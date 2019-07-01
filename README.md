@@ -62,7 +62,7 @@ module.exports = function (defaults) {
   
   ...
   
-  // Or in running in a fastboot environment
+  // Or if running in a fastboot environment
   app.import('node_modules/firebase/firebase-database.js', {
     using: [{
       transformation: 'fastbootShim'
