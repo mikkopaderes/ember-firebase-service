@@ -53,10 +53,31 @@ module.exports = function (defaults) {
     ...
   });
 
-  ...
 
-  app.import('node_modules/firebase/firebase-auth.js');
-  app.import('node_modules/firebase/firebase-firestore.js');
+  ...
+  
+  app.import('node_modules/firebase/firebase-database.js');
+  app.import('node_modules/firebase/firebase-functions.js');
+  app.import('node_modules/firebase/firebase-storage.js');
+  
+  ...
+  
+  // Or in running in a fastboot environment
+  app.import('node_modules/firebase/firebase-database.js', {
+    using: [{
+      transformation: 'fastbootShim'
+    }]
+  });
+  app.import('node_modules/firebase/firebase-functions.js', {
+    using: [{
+      transformation: 'fastbootShim'
+    }]
+  });
+  app.import('node_modules/firebase/firebase-storage.js', {
+    using: [{
+      transformation: 'fastbootShim'
+    }]
+  });
 
   return app.toTree();
 };
