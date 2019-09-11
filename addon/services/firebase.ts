@@ -5,7 +5,7 @@ import firebase from 'firebase';
 export default {
   isServiceFactory: true,
 
-  create(context: object) {
+  create(context: object): firebase.app.App {
     const config = getOwner(context).resolveRegistration('config:environment');
     let firebaseApp;
 

@@ -14,6 +14,9 @@ module.exports = {
     browser: true
   },
   rules: {
+    'import/no-unresolved': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/extensions': 'off',
   },
   overrides: [
     // node files
@@ -44,6 +47,34 @@ module.exports = {
       rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
         // add your custom rules and overrides for node files here
       })
+    },
+    // test files
+    {
+      files: [
+        '**/*-test.ts'
+      ],
+      rules: {
+        'func-names': 'off',
+        'prefer-arrow-callback': 'off'
+      }
+    },
+    // ember generated files
+    {
+      files: [
+        '.eslintrc.js',
+        '.template-lintrc.js',
+        'ember-cli-build.js'
+      ],
+      rules: {
+        strict: 'off',
+        'func-names': 'off',
+        'prefer-arrow-callback': 'off',
+        'comma-dangle': 'off',
+        'prefer-object-spread': 'off',
+        'global-require': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off'
+      }
     }
-  ]
+  ],
 };
