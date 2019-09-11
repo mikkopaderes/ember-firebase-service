@@ -1,14 +1,13 @@
 module.exports = {
   root: true,
-  parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: 'module'
-  },
+  parser: '@typescript-eslint/parser',
   plugins: [
+    '@typescript-eslint',
     'ember'
   ],
   extends: [
-    'eslint:recommended',
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
     'plugin:ember/recommended'
   ],
   env: {
