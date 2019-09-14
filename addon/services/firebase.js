@@ -5,7 +5,7 @@ import firebase from 'firebase';
 export default {
   isServiceFactory: true,
 
-  create(context: object): firebase.app.App {
+  create(context) {
     const config = getOwner(context).resolveRegistration('config:environment');
     let firebaseApp;
 
@@ -18,9 +18,3 @@ export default {
     return firebaseApp;
   },
 };
-
-declare module '@ember/service' {
-  interface Registry {
-    'firebase': firebase.app.App;
-  }
-}
