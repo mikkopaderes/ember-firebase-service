@@ -18,3 +18,20 @@
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
+
+# ember generated files
+index.js
+testem.js
+config/*.js
+tests/*.js
+tests/dummy/*.js
+tests/dummy/app/*.js
+tests/dummy/config/*.js
+tests/helpers/destroy-app.js
+tests/helpers/module-for-acceptance.js
+tests/helpers/start-app.js
+
+# ember-cli-typescript generated files
+tests/dummy/app/config/environment.d.ts
+types/dummy/index.d.ts
+types/global.d.ts
