@@ -25,7 +25,10 @@ module.exports = {
   included(app) {
     this._super.included.apply(this, arguments);
 
-    app.import('vendor/fastboot-shims/firebase/firebase-app.js');
+    app.import('vendor/fastboot-shims/firebase/firebase-app.js', {
+      type: 'vendor',
+      prepend: true,
+    });
     app.import('vendor/shims/firebase.js');
   },
 };
