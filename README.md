@@ -15,8 +15,15 @@ Compatibility
 Installation
 ------------------------------------------------------------------------------
 
+This addon requires `firebase`. Install the correct version of it which is listed by the command:
+
 ```
-npm install firebase@6.x --save-dev
+npm info ember-firebase-service peerDependencies
+```
+
+Once you've installed it, you can now install the addon itself:
+
+```
 ember install ember-firebase-service
 ```
 
