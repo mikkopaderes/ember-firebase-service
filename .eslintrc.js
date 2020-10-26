@@ -1,8 +1,17 @@
+/* eslint-disable */
+
 'use strict';
 
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
+  },
   plugins: [
     '@typescript-eslint',
     'ember'
@@ -16,9 +25,9 @@ module.exports = {
     browser: true
   },
   rules: {
+    'semi': 'off', // enforced by @typescript-eslint/semi
     'import/no-unresolved': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off'
   },
   overrides: [
     // node files
@@ -46,36 +55,17 @@ module.exports = {
         node: true
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-      })
+      extends: ['plugin:node/recommended']
     },
     // test files
     {
       files: [
+        '**/*-test.js',
         '**/*-test.ts'
       ],
       rules: {
-        'func-names': 'off',
-        'prefer-arrow-callback': 'off'
-      }
-    },
-    // ember generated files
-    {
-      files: [
-        '.eslintrc.js',
-        '.template-lintrc.js',
-        'ember-cli-build.js'
-      ],
-      rules: {
-        strict: 'off',
-        'func-names': 'off',
         'prefer-arrow-callback': 'off',
-        'comma-dangle': 'off',
-        'prefer-object-spread': 'off',
-        'global-require': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off'
+        'func-names': 'off'
       }
     }
   ]
