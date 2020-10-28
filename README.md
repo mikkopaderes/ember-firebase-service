@@ -73,7 +73,7 @@ module.exports = function (defaults) {
 
 The Firebase products that you included in your `ember-cli-build.js` are already transformed to not run in FastBoot. This is because Firebase requires different modules when running under Node.js as opposed to the browser. To use the Node.js modules, create a FastBoot-only initializer and import it from there.
 
-```
+```javascript
 export function initialize() {
   if (typeof FastBoot !== 'undefined') {
     FastBoot.require('firebase/auth');
