@@ -95,15 +95,13 @@ Inject the `firebase` service and use it as you would use Firebase normally.
 import { inject as service } from '@ember/service';
 import Component from '@ember/component';
 
-export default Component.extend({
-  firebase: service(),
+export default class MyComponent extends Component {
+  @service firebase;
 
-  init(...args) {
-    this._super(...args);
-
+  signIn() {
     this.firebase.auth().signInWithEmailAndPassword('foo', 'bar');
   }
-});
+}
 ```
 
 Contributing
