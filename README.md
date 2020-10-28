@@ -27,8 +27,6 @@ Once you've installed it, you can now install the addon itself:
 ember install ember-firebase-service
 ```
 
-*Versioning will be aligned with Firebase's MAJOR version. For example, if you want to use Firebase v4.x, you would need to depend on the v4.x of this addon.*
-
 ### Configuration
 
 Add your Firebase configuration in your app's `config/environment.js`.
