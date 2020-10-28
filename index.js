@@ -11,8 +11,8 @@ module.exports = {
 
   treeForVendor(defaultTree) {
     let browserVendorLib = new Funnel('node_modules', {
-      destDir: 'fastboot-shims',
-      files: ['firebase/firebase-app.js'],
+      destDir: 'ember-firebase-service',
+      include: ['firebase/firebase-*.js'],
     });
 
     browserVendorLib = map(browserVendorLib, content => (
@@ -25,7 +25,7 @@ module.exports = {
   included(app) {
     this._super.included.apply(this, arguments);
 
-    app.import('vendor/fastboot-shims/firebase/firebase-app.js', {
+    app.import('vendor/ember-firebase-service/firebase/firebase-app.js', {
       type: 'vendor',
       prepend: true,
     });
