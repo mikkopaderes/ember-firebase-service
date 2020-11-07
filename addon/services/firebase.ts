@@ -12,6 +12,7 @@ export default {
 
     try {
       firebaseApp = firebase.app();
+      console.log('test travis');
     } catch (e) {
       firebaseApp = firebase.initializeApp(config.firebase);
     }
