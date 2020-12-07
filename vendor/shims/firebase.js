@@ -9,5 +9,5 @@
     return { default: firebase, __esModule: true };
   }
 
-  define('firebase', [], vendorModule);
+  define('firebase/app', [], vendorModule);
 })();
