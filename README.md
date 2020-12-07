@@ -48,7 +48,10 @@ let ENV = {
 }
 ```
 
-Import the Firebase products that you need in your app's `ember-cli-build.js` using the format of `vendor/ember-firebase-service/firebase/firebase-<product>.js`. Note that you don't need to import `firebase-app.js` as it's automatically done for you.
+In your `ember-cli-build.js`, there's 2 things that you need to do:
+
+1. Set the exclusion of `'firebase'` in the `ember-auto-import` settings. This is because `firebase` package is already included as a shim in this addon.
+2. Import the Firebase products that you need in your app's `ember-cli-build.js` using the format of `vendor/ember-firebase-service/firebase/firebase-<product>.js`. Note that you don't need to import `firebase-app.js` as it's automatically done for you.
 
 ```javascript
 'use strict';
@@ -57,7 +60,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
-    ...
+    autoImport: {
+      exclude: ['firebase']
+    }
   });
 
   ...
