@@ -1,7 +1,7 @@
 import { getOwner } from '@ember/application';
 import ApplicationInstance from '@ember/application/instance';
 
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 export default {
   isServiceFactory: true,

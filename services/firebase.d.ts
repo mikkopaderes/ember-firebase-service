@@ -1,7 +1,15 @@
 /* eslint @typescript-eslint/no-empty-interface: 'off' */
 
-declare module 'ember-firebase-service/services/firebase' {
-  import firebase from 'firebase';
+import firebase from 'firebase/app';
 
-  export default interface FirebaseService extends firebase.app.App {}
+interface FirebaseInterface extends firebase.app.App {}
+
+declare module 'ember-firebase-service/services/firebase' {
+  export default interface FirebaseService extends FirebaseInterface {}
+}
+
+declare module '@ember/service' {
+  interface Registry {
+    'firebase': FirebaseInterface;
+  }
 }
