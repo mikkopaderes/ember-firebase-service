@@ -25,10 +25,6 @@ module.exports = {
   included(app) {
     this._super.included.apply(this, arguments);
 
-    app.import('vendor/ember-firebase-service/firebase/firebase-app-compat.js', {
-      type: 'vendor',
-      prepend: true,
-    });
     app.import('vendor/shims/firebase.js');
   },
 };

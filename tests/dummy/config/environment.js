@@ -17,6 +17,15 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: '123qweasd',
+      authDomain: 'ember-firebase-service-test-project.firebaseapp.com',
+      databaseURL: 'https://ember-firebase-service-test-project.firebaseio.com',
+      projectId: 'ember-firebase-service-test-project',
+      storageBucket: 'ember-firebase-service-test-project.appspot.com',
+      messagingSenderId: '123qweasd',
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
