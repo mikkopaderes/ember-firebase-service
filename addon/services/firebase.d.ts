@@ -1,6 +1,6 @@
 /* eslint @typescript-eslint/no-empty-interface: 'off' */
 
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 
 interface FirebaseInterface extends firebase.app.App {}
 

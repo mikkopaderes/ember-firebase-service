@@ -10,6 +10,14 @@ Compatibility
 * Ember.js v3.16 or above
 * Ember CLI v2.13 or above
 * Node.js v10 or above
+* Firebase v9 or above
+
+
+Versioning
+------------------------------------------------------------------------------
+
+* MAJOR version will be bumped whenever Firebase actually breaks this addon
+* PATCH version will be bumped whenever Firebase releases a new MAJOR version that doesn't break this addon. In this case, the update will simply be to bump the `peerDependencies` to include that new MAJOR version.
 
 
 Installation
