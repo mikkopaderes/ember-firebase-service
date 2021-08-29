@@ -24,6 +24,9 @@ module.exports = {
   env: {
     browser: true
   },
+  globals: {
+    FastBoot: 'readonly',
+  },
   rules: {
     'semi': 'off', // enforced by @typescript-eslint/semi
     'import/no-unresolved': 'off',

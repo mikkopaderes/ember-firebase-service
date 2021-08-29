@@ -4,7 +4,11 @@ export function initialize(appInstance: ApplicationInstance): void {
   const firebase = appInstance.lookup('service:firebase');
   const db = firebase.firestore();
 
-  db.useEmulator('localhost', 8080);
+  try {
+    db.useEmulator('localhost', 8080);
+  } catch {
+    // Empty block
+  }
 }
 
 export default {
