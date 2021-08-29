@@ -4,10 +4,10 @@
 
     const firebase = typeof FastBoot === 'undefined'
       ? self['firebase']
-      : FastBoot.require('firebase/app');
+      : FastBoot.require('firebase/compat/app');
 
     return { default: firebase, __esModule: true };
   }
 
-  define('firebase/app', [], vendorModule);
+  define('firebase/compat/app', [], vendorModule);
 })();
