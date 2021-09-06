@@ -10,12 +10,14 @@ module('Unit | Service | firebase', function (hooks) {
 
       // Arrange
       this.owner.register('config:environment', {
-        apiKey: '<api_key>',
-        authDomain: '<auth_domain>',
-        databaseURL: '<database_url>',
-        projectId: '<project_id>',
-        storageBucket: '<storage_bucket>',
-        messagingSenderId: '<messaging_sender_id>',
+        firebase: {
+          apiKey: '<api_key>',
+          authDomain: '<auth_domain>',
+          databaseURL: '<database_url>',
+          projectId: '<project_id>',
+          storageBucket: '<storage_bucket>',
+          messagingSenderId: '<messaging_sender_id>',
+        }
       });
 
       // Act
@@ -24,5 +26,20 @@ module('Unit | Service | firebase', function (hooks) {
       // Assert
       assert.equal(result.name, '[DEFAULT]');
     });
+
+    test('throws an error if the firebase config is not present', function (assert) {
+      assert.expect(1);
+ 
+      // Arrange
+      this.owner.register('config:environment', {
+        firebase: null
+      });
+
+      // Act
+      const result = this.owner.lookup('service:firebase');
+
+      // Assert
+      assert.throws('an error is thrown if no config is present');
+   });
   });
 });
